@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cruzeiro's Clock</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/cwdc/mainPage/LCG.css" />
+    <style>
+      :root {
+        --cgrena: #294493;
+        --cgreen: #294493;
+        --corange: orange;
+        --cwhite: white;
+        --cwhite1: #294493;
+        --cwhite2: #294493;
+        --cwhite3: #294493;
+      }
+      body {
+        margin: 20px;
+      }
+      #clock,
+      #handles {
+        border: 5px solid #294493;
+        padding: 20px;
+        margin: 0px;
+      }
+      #site-cruzeiro {
+        width: 512px;
+        font-family: cursive;
+        text-align: center;
+        font-size: 30px;
+      }
+      #container {
+        position: relative;
+        height: 512px;
+        margin: 0px;
+        margin-bottom: 50px;
+      }
+      canvas {
+        position: absolute;
+      }
+      #handles {
+        z-index: 2;
+      }
+      #legend {
+        z-index: 1;
+      }
+      #clock {
+        background-color: antiquewhite;
+        z-index: 1;
+      }
+      button {
+        font-size: 200%;
+        margin-right: 40px;
+        margin-left: 40px;
+        padding: 0 10px 0 10px;
+      }
+      #address {
+        margin-left: 0;
+        text-align: justify;
+        width: 512px;
+        font-size: small;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p id="site-cruzeiro">
+      <a href="https://cruzeiro.com.br">Cruzeiro Esporte Clube</a>
+      <sub style="font-size: small">
+        <a href="/cwdc/downloads/PDFs/04_LCG_Window-Viewport.pdf">[1]</a>
+        <a href="/cwdc/downloads/cederj/AD1_2022-1.pdf">[2]</a>
+        <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">
+          [3]
+        </a>
+      </sub>
+    </p>
+
+    <div id="container">
+      <canvas id="clock" width="512" height="512">
+        Please upgrade your browser.
+      </canvas>
+      <canvas id="handles" width="512" height="512">
+        Please upgrade your browser.
+      </canvas>
+      <canvas id="legend" width="512" height="512">
+        Please upgrade your browser.
+      </canvas>
+    </div>
+    <br />
+    <div id="address"></div>
+    <br />
+    <p>
+      <audio title="Hino do Cruzeiro" controls loop>
+        <source src="hino-cruzeiro.mp3" type="audio/mpeg" />
+        Please upgrade your browser!
+      </audio>
+
+      <small>
+        <p>
+          Hino do Cruzeiro Esporte Clube por
+          <a
+            href="https://memoria.redeminas.tv/a-historia-do-hino-do-cruzeiro/#:~:text=O%20hino%20do%20Cruzeiro%20foi,pessoal%20da%20cantora%20Clara%20Nunes."
+          >
+            Jadir Ambrósio (1965).
+          </a>
+        </p>
+      </small>
+    </p>
+    <br />
+    <div class="sideBySide">
+      <label><b>Location:</b></label>
+      <button onclick="nextLocation()">+</button>
+      <button onclick="previousLocation()">-</button>
+    </div>
+    <p>
+        <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/AXKb8zaFwfI?si=nwgPOWCya357IPCa"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <br />
+      <small id="Rivelino">
+        Cruzeiro 6 x 1 Atlético MG
+        <a href="https://www.youtube.com/watch?v=AXKb8zaFwfI&t=5s&pp=ygUYY3J1emVpcm8gNngxIGF0bGV0aWNvIG1n"> 04/12/2011 </a>
+      </small>
+      <br />
+      <small id="Renato">
+        Copa do Brasil 2003
+        <a href="https://www.youtube.com/watch?v=m8qlZkTFBkU&pp=ygUcY3J1emVpcm8gY29wYSBkbyBicmFzaWwgMjAwMw%3D%3D"> 11/06/2003 </a>
+      </small>
+      <br />
+      <small id="Cano">
+        Bi-campeão seguido
+        <a href="https://youtu.be/r68Qg7JnsP8?si=-3J5Ma1A3PTqxAxW"> 23/11/2014 </a>
+      </small>
+    </p>
+
+    <script src="suncalc.js"></script>
+    <script src="clock.js"></script>
+    <script src="date.js"></script>
+    <script>
+      document.querySelector("#Rivelino").innerHTML += `(há ${elapsedYears(
+        "2011-12-04"
+      )} anos atrás)`;
+      document.querySelector("#Renato").innerHTML += `(há ${elapsedYears(
+        "2003-06-11"
+      )} anos atrás)`;
+      document.querySelector("#Cano").innerHTML += `(há ${elapsedYears(
+        "2014-11-23"
+      )} anos atrás)`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+/* Estilos gerais */
+body {
+    background-color: #f0f0f2;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont,
+        "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo do campo de entrada de texto */
+input {
+    margin: 10px 3px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px;
+}
+
+/* Estilo do rótulo */
+label {
+    position: relative;
+    top: 12px;
+    width: 190px;
+    float: left;
+}
+
+/* Estilo do botão */
+.button {
+    font-size: 13px;
+    color: red;
+    background-color: #f8fad7;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #fadad7;
+}
+
+/* Estilo da caixa que envolve os campos de entrada */
+.box {
+    background-color: antiquewhite;
+    box-shadow: 8px 8px 6px grey;
+    width: 450px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: lightblue;
+    padding: 10px;
+    margin-left: 2px;
+}
+
+/* Estilo da mensagem de erro */
+#errorMessage {
+    color: red;
+    font-size: 90% !important;
+}
+
+/* Estilo da mensagem de sucesso */
+#successMessage {
+    color: green;
+    font-size: 90% !important;
+    display: block;
+    margin-top: 20px;
+}
+
+/* Estilo do campo de entrada de número com estilo de moeda */
+input.currency {
+    text-align: left;
+    padding-right: 15px;
+}
+
+/* Estilos do grupo de entrada */
+.input-group .form-control {
+    float: none;
+}
+
+.input-group .input-buttons {
+    position: relative;
+    z-index: 3;
+}
+
+/* Estilos da janela arrastável */
+#cdcfieldset {
+    cursor: move;
+}
+
+/* Estilos para links */
+a {
+    text-decoration: none;
+}
+
+/* Estilos para links visitados */
+a:visited {
+    color: blue;
+}
+
+/* Estilos para links quando o mouse está sobre eles */
+a:hover {
+    text-decoration: underline;
+}

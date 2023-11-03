@@ -180,6 +180,7 @@ document.getElementById("submitButton").onclick = function (e) {
 
 
 
+
   document.getElementById("resultado2").innerHTML = `
     <div id="titulo_tabela">
         <div>

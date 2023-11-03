@@ -1,0 +1,31 @@
+td {
+  text-align: center;
+  width: 120px;
+}
+
+
+#titulo_tabela {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#nomes_colunas {
+  border: 1px solid;
+}
+
+#tabela {
+  align-items: center;
+  padding: 10px;
+}
+
+#titulo {
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 70px;
+}
+
+#tabelaBody {
+  margin: 20px;
+}

@@ -6,35 +6,56 @@ a:hover {
     color: #2074a0;
 }
 
-.boxes {
+.boxes{
     margin-top: 60px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
 }
 
-#info-box {
-    margin-right: 20px;
+#box1{
+    margin-right: 200px;
     background-color: cadetblue;
     border: 5px solid black;
     border-radius: 10px;
     padding: 10px;
 }
 
-#result-box {
+#box2{
     background-color: cadetblue;
     border: 5px solid black;
     border-radius: 10px;
     padding: 10px;
 }
 
-#titulo_tabela {
+#titulo_tabela{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+/* #nomes_colunas{
+    border: 1px solid;
+}
+
+#tabela{
+    align-items: center;
+    padding: 10px;
+}
+
+#titulo{
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 70px;
+}
+
+#tabelaBody{
+    margin: 20px;
+} */
+
+
+/* Estilo para toda a tabela */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -44,6 +65,7 @@ table {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilo para as células de cabeçalho da tabela */
 th {
     background-color: #f8f8f8;
     font-weight: bold;
@@ -53,15 +75,14 @@ th {
     text-align: left;
 }
 
-td {
+/* Estilo para as células de dados da tabela */
+#teste {
     padding: 12px;
     border: 1px solid #e1e1e1;
+    background-color: red;
 }
 
-#tabelaBody tr:nth-child(odd) {
+/* Estilo para linhas ímpares da tabela */
+#row:nth-child(odd) {
     background-color: #b1a6a6;
-}
-
-#tabelaBody tr:hover {
-    background-color: #d3d3d3;
 }
